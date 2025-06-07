@@ -59,7 +59,6 @@ label {
 
 .remove-btn i:hover {
   background-color: #E2E8F0;
-
 }
 
 .custom-input {
@@ -76,4 +75,22 @@ label {
 
 .custom-input-group:has(input:focus) label {
   color: #3B5AC2;
+}
+
+.error-message {
+  gap: 4px;
+  color: #D71D1D;
+  margin-top: 8px;
+}
+
+.error-message p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+  vertical-align: middle;
+}
+
+.custom-input-group:has(.error-message)>label {
+  color: #D71D1D;
 }
