@@ -19,10 +19,9 @@ export class CertificadoComponent implements OnInit {
   constructor(private certificadoService: CertificadoService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-      this.route.paramMap.subscribe(params => {
+    this.route.paramMap.subscribe(params => {
       this.id = params.get('id');
       this.certificado = this.certificadoService.certificados.find(Item => Item.id == this.id);
-      console.log(this.certificado);
     });
 
   }

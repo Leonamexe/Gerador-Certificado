@@ -8,7 +8,7 @@ import { Certificado } from '../../interfaces/certificado';
 
 @Component({
   selector: 'app-certificados',
-  imports: [ItemCertificado, SecondaryButton],
+  imports: [ItemCertificado, SecondaryButton, RouterLink],
   templateUrl: './certificados.html',
   styleUrl: './certificados.css'
 })
@@ -16,10 +16,10 @@ export class Certificados implements OnInit {
 
   certificados: Certificado[] = [];
 
-  constructor(private certificadoService: CertificadoService) {}
+  constructor(private CertificadoService: CertificadoService) {}
 
   ngOnInit(): void {
-    this.certificados = this.certificadoService.certificados;
+    this.certificados = this.CertificadoService.certificados;
     console.log(this.certificados);
   }
 }
